@@ -1,0 +1,807 @@
+{# Looking fot these files in given path #}
+{% use '_metas-and-scripts.html.twig' %}
+{% use '_header-and-share.html.twig' %}
+{% use '_html-elements.html.twig' %}
+
+<!DOCTYPE HTML>
+
+<html lang="fr" class="h-full relative"> 
+	<head>
+		{# {{ block('consent') }} #}
+
+		<script src="https://cdn.tailwindcss.com"></script>  
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+		<!-- <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@600&display=swap" rel="stylesheet"> -->
+		
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v1.3.3/dist/jBox.all.min.css" rel="stylesheet">
+
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/main.css">
+		<!-- <link href="https://vjs.zencdn.net/8.0.4/video-js.css" rel="stylesheet" /> -->
+
+		{# <?php include 'hb_card_tp.php'; ?> #}
+		{{ block('head_brand') }}
+		
+	</head>
+	<!-- OneTrust Cookies Consent Notice start for blick.ch -->
+	<!-- <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" data-document-language="true" type="text/javascript" charset="UTF-8" data-domain-script="d57e5842-f42f-46bc-a4ea-4a82bd82322c" ></script>
+	<script type="text/javascript">
+	function OptanonWrapper() { } 
+	</script> -->
+	<!-- OneTrust Cookies Consent Notice end for blick.ch --> 
+	{# {{ block('frame') }} #}
+	<body class="bg-white h-full"> 
+		<div class="wrapper bg-slate-100">
+		<!-- {{ block('loading_overlay') }} -->
+		{{ block('gtm') }}
+		
+		{{ block('header') }}
+		{{ block('menu_overlay') }}
+		
+		
+		<div class="hero container max-w-screen-2xl md:flex flex-row-reverse">
+			
+			<div class="herochild w-full md:w-1/2">
+				<!-- <figure class="w-full h-full float-right bg-bottom bg-cover contrast-125" style="background-image:url('img/this/_main3.jpg');">
+				</figure> -->
+			</div>
+			<div class="herogradient bg-slate-300  w-full md:w-1/2 px-4 md:px-12 pt-8 md:pt-28 pb-8 md:pb-12">
+				<div class="">
+					<h1 class="text-gradient text-4xl md:text-5xl font-semibold mb-6 md:mb-10 ">Une soirée avec les camés et les soignants du nouveau espace de consommation lausannois</h1>
+					<div class="container authors flex py-4 border-y border-slate-400">
+						<div class="author w-40">
+							<a target="_blank" href="https://www.blick.ch/fr/auteurs/daniella-gorbunova-journaliste-blick-id16519907.html" class="flex items-center">
+								<div class="align-text-bottom text-xs">
+									<span class="inline-block font-extrabold underline">Daniella Gorbunova</span><br>
+									<span class="inline-block">Texte</span>
+								</div>
+							</a>
+						</div>
+						<div class="author w-48">
+								<div class="align-text-bottom text-xs">
+									<span class="inline-block font-extrabold">Julie de Tribolet</span><br>
+									<span class="inline-block">Photographie</span>
+								</div>
+						</div>
+						<div class="author w-48">
+								<div class="align-text-bottom text-xs">
+									<span class="inline-block font-extrabold">César Greppin</span><br>
+									<span class="inline-block">Format web</span> 
+								</div>
+						</div>  
+						
+					</div>  
+					<h2 class="text-xl md:text-2xl mt-6 md:mt-10">Le nouvel Espace de consommation sécurisé de la Riponne est censé mettre un frein à la prise de drogues dans les rues lausannoises, à la vue de tous. Blick a passé une soirée avec celles et ceux que la vie a fait échouer dans la dope, et puis ceux qui les aident. Reportage.
+					</h2><div class="container authors flex py-4 max-w-2xl <!--border-y--> border-slate-400 mt-2 md:mt-6">
+
+	<div class="flex items-center mr-2">
+			<div class="align-text-bottom text-xs">
+				<span class="inline-block font-extrabold uppercase">Partager</span>
+			</div>
+	</div>
+	<div class="mx-1">
+		<a target="_blank" href="https://www.facebook.com/sharer.php?u=https://www.prod.storytelling.blick.ch/fr/drug-checking-comment-les-fetards-font-tester-leur-drogue-a-geneve/&amp;display=popup&amp;ref=plugin&amp;src=share_button" class="flex items-center">
+			<img src="img/icon-facebook-b.svg" alt="Icône de partage facebook" class="rounded-full">
+		</a>
+	</div>
+	<div class="mx-1">
+		<a target="_blank" href="https://twitter.com/intent/tweet?text=Pour la première fois, un consommateur, un drug-checking et le labo toxicologique des Hôpitaux universitaires de Genève ont laissé un journaliste suivre des échantillons de MDMA et de coke à la trace. https://www.prod.storytelling.blick.ch/fr/drug-checking-comment-les-fetards-font-tester-leur-drogue-a-geneve/%20&amp;via=blick_fr" class="flex items-center">
+			<img src="img/icon-twitter-b.svg" alt="Icône de partage facebook" class="rounded-full">
+		</a>
+	</div>
+	<div class="mx-1">
+		<a target="_blank" href="whatsapp://send?text=Voici comment les fêtards genevois font tester leur drogue%0A%0Ahttps://www.prod.storytelling.blick.ch/fr/drug-checking-comment-les-fetards-font-tester-leur-drogue-a-geneve/" class="flex items-center">
+			<img src="img/icon-wa-b.svg" alt="Icône de partage facebook" class="rounded-full">
+		</a>
+	</div>
+	<div class="mx-1">
+		<a target="_blank" href="mailto:?subject=Format spécial Blick.ch :&nbsp;Voici comment les fêtards genevois font tester leur drogue&amp;body=Voici comment les fêtards genevois font tester leur drogue%0A%0APour la première fois, un consommateur, un drug-checking et le labo toxicologique des Hôpitaux universitaires de Genève ont laissé un journaliste suivre des échantillons de MDMA et de coke à la trace.%0A%0Ahttps://www.prod.storytelling.blick.ch/fr/drug-checking-comment-les-fetards-font-tester-leur-drogue-a-geneve/" class="flex items-center">
+			<img src="img/icon-plane-b.svg" alt="Icône de partage facebook" class="rounded-full">
+		</a>
+	</div>
+	<div class="mx-1">
+		<span class="copy flex items-center cursor-pointer">
+			<img src="img/icon-link-b.svg" alt="Icône de partage facebook" class="rounded-full">
+		</span>
+	</div>
+	<!-- <div class="author w-52">
+		<a href="" class="flex items-center">
+		<img src="img/fabien-goubet.png" alt="Portrait de Fabien Goubet" class="rounded-full w-12 mr-2.5">
+		<div class="align-text-bottom text-xs">
+			Par <span class="inline-block font-extrabold underline">Fabien Goubet</span>
+			<span class="inline-block">Journaliste Blick</span></div>
+		</a>
+	</div> -->
+</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- <div class="hero container flex max-w-screen-2xl relative">
+			
+			<div class="gradient absolute w-full h-full z-10"></div>
+			<div class="txtcontainer  container max-w-4xl absolute  z-10 left-1/2 -translate-x-1/2 top-2/4 -translate-y-full -mt-1">
+				<h1 class="uppercase text-center text-white px-4 pb-2 md:pb-6">
+					Une soirée avec les camés et les soignants du nouveau espace de consommation lausannois
+				</h1>
+				
+			</div>  
+			 
+			
+		</div> -->
+		
+		
+
+		
+
+		<div class="container max-w-screen-2xl px-4 relative bg-white">
+			<div id="title0" class="chapeau container py-4 max-w-2xl">
+				<!-- <h2 class="text-xl md:text-2xl mt-2 md:mt-12">
+					Le nouvel Espace de consommation sécurisé de la Riponne est censé mettre un frein à la prise de drogues dans les rues lausannoises, à la vue de tous. Blick a passé une soirée avec celles et ceux que la vie a fait échouer dans la dope, et puis ceux qui les aident. Reportage.
+				</h2> -->
+			</div>            
+			<!-- <div id="chart"></div> -->
+			<div class="container mt-8 max-w-2xl">
+				<p class="lettrine text-lg font-light mb-6">
+					Certains usagers de substances psychotropes nous le diront, dans la soirée, et ils n’ont pas complètement tort: on dirait un peu une salle d’attente d’hôpital, de prime abord, cet endroit. Surtout lorsque le lieu est encore vide. Sur fond de murs blancs et bleu clair, dans les effluves de désinfectant, l’Espace de consommation sécurisé à la Riponne ouvre ses portes à 15h30, ce vendredi 21 juin. 
+				</p>
+
+	
+
+				<p class="text-lg font-light mb-6">
+					Nous arrivons sur place une demi-heure avant l’ouverture des portes. Stéphane, employé de la structure, marmonne dans sa longue barbe blanche: «Je sens qu’il vont être un peu surexcités, nos usagers, ce soir, entre la scène juste devant le local, et la présence de la presse…». Dehors, juste devant l’entrée, la fête de la musique — coïncidence du calendrier — bat son plein, et va donner un peu de fil à retordre aux cinq intervenants sociosanitaires qui sont de garde aujourd’hui, jusqu’à la fermeture, à 21h30. 
+				</p> 
+
+
+				<figure class="float-right pt-4 pb-6">
+					<div class="container">
+						<div class="w-full">
+							<img src="img/this/_intro_equipe.jpg" alt="Au mur, de l’humour et de la prévention sur fond acidulé">
+							<figcaption class="py-2 text-xs">Briefing de l'équipe</figcaption>
+						</div>
+					</div>
+				</figure>
+
+
+				<p class="text-lg font-light mb-6">
+					Cela fait moins d’un mois que le nouvel espace, géré par la Fondation ABS, a ouvert. Il est le pendant citadin du même lieu, qui existe depuis 2018 au Vallon, dans les hauts de Lausanne. Et il dénombre déjà entre 150 et 200 visites par ouverture (en comptant les gens qui viennent plusieurs fois). À l’origine de cette initiative? Une volonté de la Ville d’apaiser cette fameuse place de la Riponne, connue pour son Palais de Rumine, ses bars, mais aussi pour ses badauds qui font la manche, visiblement enclins aux paradis artificiels. 
+				</p>
+
+				<p class="text-lg font-light mb-6">
+					Ce genre de service, c’est ce qu’on appelle le bas seuil, dans la lutte contre l’usage de stupéfiants. Autrement dit une aide dite médicale et sociale de base, sans visée d'abstinence, sans dossier, et sans prise en charge individuelle. En bref, les travailleurs sociosanitaires sont là pour minimiser les risques liés à la consommation, «et, pour une fois, faire un sort que ces personnes se sentent comme des être humain à part entière: ici, on est là pour les aider, on ne les juge pas, on ne leur fait pas la morale. Et ils le savent. Ils sont, en général, très respectueux. Ils nous considèrent un peu comme un lieu de refuge, de socialisation, aussi», me glisse un des employés, Fernando. La plupart de nos interlocuteurs, au fil de l’après-midi et de la soirée, confirmeront cela. 
+				</p>
+
+				<figure class="float-right pt-4 pb-6 -mx-0 lg:-mx-32 xl:-mx-64">
+					<div class="relative">
+						<img src="img/this/title-how-to.jpg" alt="">
+						<img src="img/this/hotspot.svg" alt="" class="absolute hotspot hotspot1 tooltip" title="<b class='font-semibold'>Le crack par inhalation</b><br>Un simple couteau, qui sert à mélanger la bicarbonate de soude, la poudre de cocaïne et de l’eau dans la cuillère adjacente."> 
+						<img src="img/this/hotspot.svg" alt="" class="absolute hotspot hotspot2 tooltip" title="<b class='font-semibold'>Le crack par inhalation</b><br>Une cuillère, dans le creux de laquelle on mélange la bicarbonate de soude, la poudre de cocaïne et de l’eau, le tout en chauffant la cuillère avec un briquet placé en dessous. Procédé qui donne le crack à fumer. "> 
+						<img src="img/this/hotspot.svg" alt="" class="absolute hotspot hotspot3 tooltip" title="<b class='font-semibold'>Le crack par inhalation</b><br>Une grande et une petite pipe à crack, par laquelle on aspire (en général depuis une bouteille en pet, par exemple)."> 
+						<img src="img/this/hotspot.svg" alt="" class="absolute hotspot hotspot4 tooltip" title="<b class='font-semibold'>Le crack par inhalation</b><br>L’embout de la pipe à crack."> 
+						<img src="img/this/hotspot.svg" alt="" class="absolute hotspot hotspot5 tooltip" title="<b class='font-semibold'>Le crack par inhalation</b><br>L’eau douce, qui sera mélangée à la bicarbonate de soude et la poudre de cocaïne."> 
+						<img src="img/this/hotspot.svg" alt="" class="absolute hotspot hotspot6 tooltip" title="<b class='font-semibold'>Le crack par inhalation</b><br>La bicarbonate de soude."> 
+
+						<img src="img/this/hotspot.svg" alt="" class="absolute hotspot hotspot7 tooltip" title="<b class='font-semibold'>Le crack par injection</b><br>Un récipient à mélange, que les personnes qui se piquent utilisent plus volontiers qu’une cuillère, en chauffant le récipient avec un briquet placé en dessous."> 
+						<img src="img/this/hotspot.svg" alt="" class="absolute hotspot hotspot8 tooltip" title="<b class='font-semibold'>Le crack par injection</b><br>De l’eau douce."> 
+						<img src="img/this/hotspot.svg" alt="" class="absolute hotspot hotspot9 tooltip" title="<b class='font-semibold'>Le crack par injection</b><br>Des lingettes désinfectantes, une pour avant et une pour après l’injection."> 
+						<img src="img/this/hotspot.svg" alt="" class="absolute hotspot hotspot10 tooltip" title="<b class='font-semibold'>Le crack par injection</b><br>Une seringue."> 
+						<img src="img/this/hotspot.svg" alt="" class="absolute hotspot hotspot11 tooltip" title="<b class='font-semibold'>Le crack par injection</b><br>Une aiguille."> 
+						<img src="img/this/hotspot.svg" alt="" class="absolute hotspot hotspot12 tooltip" title="<b class='font-semibold'>Le crack par injection</b><br>Des mouchoirs (en cas de saignements après l’injection)."> 
+
+						<img src="img/this/hotspot.svg" alt="" class="absolute hotspot hotspot13 tooltip" title="<b class='font-semibold'>Le crack sniffé</b><br>Des feuilles à sniff, pour en faire des pailles que l’on met dans le nez.">
+						<img src="img/this/hotspot.svg" alt="" class="absolute hotspot hotspot14 tooltip" title="<b class='font-semibold'>Le crack sniffé</b><br>De l’eau douce, pour se nettoyer le nez avant la prise.">
+						<img src="img/this/hotspot.svg" alt="" class="absolute hotspot hotspot15 tooltip" title="<b class='font-semibold'>Le crack sniffé</b><br>Une paille (toute faite cette fois, une alternative aux feuilles à sniff).">
+
+						<img src="img/this/hotspot.svg" alt="" class="absolute hotspot hotspot16 tooltip" title="<b class='font-semibold'>L’héroïne par inhalation</b><br>Des feuilles d’aluminium, qui servent à fumer l’héroïne. La première sert de réceptacle au liquide préalablement préparé (l’héroïne), la seconde sert de pipe.">
+					</div>
+					
+					<figcaption class="py-2 text-xs mb-6">Un exemple du matériel qu’on trouve à l’Espace de consommation de la Riponne, et comment il est utilisé. Nous avons détaillé quatre des modes de consommation les plus fréquents, pour deux des drogues les plus populaires auprès des usagères et usagers. </figcaption>
+				</figure>
+
+				<p class="text-lg font-light mb-16 md:mb-20">
+					Nous avons passé près de sept heures dans la structure, en tentant de se fondre dans la masse, collées aux murs (autant qu’une journaliste et une photographe le peuvent). De l’accueil aux salles de consommation, en passant par la rue, nous avons tout vu et entendu. Julie avec son appareil photo, moi avec mon dictaphone et mes oreilles. On vous fait visiter ce lieu très spécial de l’intérieur, si vous ne craignez pas trop les aiguilles, et les histoires de vie qui font froid dans le dos (mais parfois chaud au cœur). Immersion. 
+
+				</p>
+
+				
+
+			</div>
+
+			
+			<figure class="w-auto -mx-4 relative">
+				<img src="img/this/title-1c.jpg" alt="">
+				
+				<figcaption class="py-2 px-4 text-xs mb-6">Les gens qui arrivent sont en terrain connu</figcaption>
+			</figure>
+
+			
+				
+			
+			<div class="container mt-8 max-w-2xl">
+
+				<div class="text-4xl font-extrabold py-6 border-y border-slate-400 mt-8 md:mt-16 mb-8 md:mb-12">
+					«On les connait déjà tous» 
+				</div>
+
+				<p class="text-lg font-light mb-6">
+					Avant même l’ouverture des portes, on voit une petite foule s’amasser, sous l’abri du numéro 10 de la place de la Riponne. Le modus operandi? Lorsqu’un usager arrive, on prend son blase — les personnes qui consomment ici peuvent rester anonymes. Si c’est la première fois qu’il vient, on lui soumet un petit questionnaire: quel âge a-t-il (ou elle), qu’est-ce qu’il consomme, comment et depuis quand? «Mais, de manière générale, on les connait déjà tous, ceux qui viennent ici. Ce sont souvent les mêmes qu’au Vallon, sauf qu’ils viennent plus souvent, désormais, grâce au fait que le lieu est central…», précise Jeanne, la petite trentaine, infirmière de formation. Il est 15h30. Elle ouvre le guichet.
+				</p>
+
+				<!-- DOUBLE -->
+				<figure class="-mx-0 lg:-mx-32 xl:-mx-64 pt-4 pb-6">
+					<div class="grid gap-4 md:grid-cols-2">
+						<div class="">
+							<img src="img/this/_ch_1_ouverture.jpg" alt="Les cahiers de sébastien, sous l'emprise de la drogue">
+							<!-- <figcaption class="py-2 text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum dignissimos nobis, reprehenderit ex sint nostrum laboriosam provident voluptate id et rem saepe quia praesentium libero sapiente? Ratione excepturi est culpa.</figcaption> -->
+						</div>
+						<div class="">
+							<img src="img/this/_ch_1_liste.jpg" alt="Les cahiers de sébastien, sous l'emprise de la drogue">
+							<!-- <figcaption class="py-2 text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum dignissimos nobis, reprehenderit ex sint nostrum laboriosam provident voluptate id et rem saepe quia praesentium libero sapiente? Ratione excepturi est culpa.</figcaption> -->
+						</div>
+					</div>
+					<figcaption class="py-2 text-xs">Accueil en place + déclaration de qu'est-quon prend quand on arrive</figcaption>
+				</figure>
+
+				<!-- <figure class="float-right">
+					<div class="container py-4">
+						<div class="w-full">
+							<img src="img/this/chantier.jpg" alt="Au mur, de l’humour et de la prévention sur fond acidulé">
+							<figcaption class="py-2 text-xs">Au mur, de l’humour et de la prévention sur fond acidulé.</figcaption>
+						</div>
+					</div>
+				</figure> -->
+
+				<p class="text-lg font-light mb-6">
+					Les usagers doivent ensuite indiquer quelle drogue ils vont consommer, et par quel biais. Jeanne précise: «La cocaïne — sous toutes ses formes, y compris ce qu’on appelle le crack — l’héroïne et les benzodiazépines sont les substances les plus fréquemment consommées, ici.» Et par quel biais, en général? «La plupart fument leur produit, je dirais. Puis, dans l’ordre, il y a l’injection, et le sniff.» Une fois inscrits, les individus reçoivent un numéro — comme à la pharmacie, ou à la Poste. Lorsque l’écran accroché au-dessus du guichet principal affiche leur tour, ils et elles ont accès à l’espace de consommation le temps d’une demi-heure. 
+				</p>
+				
+
+				<!-- COLONNE -->
+				<figure class="float-right pt-4 pb-6">
+					<div class="container">
+						<div class="w-full">
+							<img src="img/this/_ch_1_accueil.jpg" alt="Au mur, de l’humour et de la prévention sur fond acidulé">
+							<figcaption class="py-2 text-xs">Présentation des lieu 1</figcaption>
+						</div>
+					</div>
+				</figure>
+
+				<p class="text-lg font-light mb-6">
+					À quoi ça ressemble? La salle principale comprend la zone d’accueil et de repos. Il faut passer une porte, après le guichet, pour pénétrer dans la zone de consommation, qui compte trois petites cabines pour l’inhalation, dont une privative — pour les femmes seules ou les couples — un espace d’injection, ouvert, et derrière lui une grande table en métal pour le sniff. Trente minutes après l’ouverture à peine, le guichet d’accueil est pris d’assaut.
+				</p>
+
+				
+
+				<!-- DOUBLE -->
+				<figure class="-mx-0 lg:-mx-32 xl:-mx-64 pt-4 pb-6">
+					<div class="grid gap-4 md:grid-cols-2">
+						<div class="">
+							<img src="img/this/_ch_1_table_sniff.jpg" alt="Les cahiers de sébastien, sous l'emprise de la drogue">
+							<!-- <figcaption class="py-2 text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum dignissimos nobis, reprehenderit ex sint nostrum laboriosam provident voluptate id et rem saepe quia praesentium libero sapiente? Ratione excepturi est culpa.</figcaption> -->
+						</div>
+						<div class="">
+							<img src="img/this/_ch_1_cabine.jpg" alt="Les cahiers de sébastien, sous l'emprise de la drogue">
+							<!-- <figcaption class="py-2 text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum dignissimos nobis, reprehenderit ex sint nostrum laboriosam provident voluptate id et rem saepe quia praesentium libero sapiente? Ratione excepturi est culpa.</figcaption> -->
+						</div>
+					</div>
+					<figcaption class="py-2 text-xs">Présentation des lieu 2 et 3</figcaption>
+				</figure>
+
+				<!-- <figure class="float-right">
+					<div class="container py-4">
+						<div class="w-full">
+							<img src="img/this/bobos.jpg" alt="Au mur, de l’humour et de la prévention sur fond acidulé">
+							<figcaption class="py-2 text-xs">Au mur, de l’humour et de la prévention sur fond acidulé.</figcaption>
+						</div>
+					</div>
+				</figure> -->
+
+				<!-- <figure class="mx-auto  mx-auto pt-4 pb-6">
+					<div class="card">
+						<div class="front" style="background-image:url('img/this/_alison1.jpg'); background-size:cover;">
+							<div class="card-labels absolute z-10 top-7 w-full">
+								<span class="card-label1 block text-4xl leading-none text-white antialiased font-semibold mb-1">Alison, 33 ans</span>
+								<span class="card-label2 block text-xl leading-none text-white antialiased font-sans text-light">Consomme depuis 16 ans</span>
+							</div>
+							<button class="absolute bottom-7 right-7 rounded-full text-lg  bg-yellow-200 hover:bg-yellow-300 px-6 py-3"><span class="block float-left mr-2">Sa confidence</span><img src="img/this/arrow.svg" alt="" class="mt-1.5"></button>
+						</div>
+						<div class="back bg-yellow-200">
+							<p class="absolute top-7 right-7 bottom-7 left-7 italic text-left text-md">
+								«C’est ma mère qui m’a fait essayer l'héroïne pour la première fois, ici, à la place de la Riponne, quand j’avais 17 ans… Peu après, j’ai eu un gosse. L’État me l’a retiré, bien sûr. Ça m’a fait un tel choc que, pendant un moment, j’ai réussi à tout arrêter, à l’âge de 23 ans. J’étais sous <span class="font-bold underline tooltip" title="ndlr: substitut médical pour stopper la prise d’héroïne">méthadone</span>. J’ai eu deux autres enfants, avec un autre homme. Puis on s’est séparés, et c’était violent.<br><br>Il a été dire aux autorités que je suis une toxicodépendante en rémission, pour qu’on m’enlève la garde de mes deux derniers. Ça a fonctionné, et ça m’a vraiment détruite. J’ai replongé. J’ai commencé à me piquer. Mais j’ai encore l’espoir de m’en sortir, de récupérer mes enfants.»
+							</p>
+							<button class="absolute -top-3 -right-3 rounded-full text-lg  text-yellow-200 bg-black hover:bg-gray-600 px-6 py-6"><img src="img/this/cross.svg" alt="" class="absolute top-1/2 left-1/2 -translate-x-1/2  -translate-y-1/2"></button>
+						</div>
+					</div>
+				</figure> -->
+
+				<!-- <figure class="mx-auto  mx-auto pt-4 pb-6">
+					<div class="card">
+						<div class="front" style="background-image:url('img/this/_bob1.jpg'); background-size:cover;">
+							<div class="card-labels absolute z-10 top-7 w-full">
+								<span class="card-label1 block text-4xl leading-none text-white antialiased font-semibold mb-1">Bob, 57 ans</span>
+								<span class="card-label2 block text-xl leading-none text-white antialiased font-sans text-light">Consomme depuis 37 ans</span>
+							</div>
+							<button class="absolute bottom-7 right-7 rounded-full text-lg  bg-yellow-200 hover:bg-yellow-300 px-6 py-3"><span class="block float-left mr-2">Sa confidence</span><img src="img/this/arrow.svg" alt="" class="mt-1.5"></button>
+						</div>
+						<div class="back bg-yellow-200">
+							<p class="absolute top-7 right-7 bottom-7 left-7 italic text-left text-md">
+								«J’ai commencé l’héroïne il y a trois décennies. Depuis, j’ai arrêté quelques fois. Aujourd’hui, je suis suivi médicalement, je reçois ce qu’il me faut à la pharmacie. Si je viens ici, c’est seulement quand j’ai dû dépanner un pote, et que j’en ai plus assez pour moi — donc je dois racheter dans la rue. Sinon, je consomme chez moi, j’ai la chance d’avoir un appart.<br><br>Je suis un vieux, moi, j’ai plus l’âge pour la rue! Vous savez, au siècle passé, le monde de la drogue, c’était autre chose: la Platzspitz de Zurich, ou la plus grande scène ouverte de la drogue, j’y étais. Tout était dégueulasse, les gens étaient assommés par terre. On ne savait pas s'ils étaient morts ou vivants, parfois.» 
+							</p>
+							<button class="absolute -top-3 -right-3 rounded-full text-lg  text-yellow-200 bg-black hover:bg-gray-600 px-6 py-6"><img src="img/this/cross.svg" alt="" class="absolute top-1/2 left-1/2 -translate-x-1/2  -translate-y-1/2"></button>
+						</div>
+					</div>
+				</figure> -->
+
+				
+
+				<p class="text-lg font-light mb-16 md:mb-20">
+					Annelore est parmi les premiers arrivants. Visiblement pressée, elle a la petite quarantaine, une étoile tatouée sous l’œil. Avec ses cheveux courts et ses yeux qui pétillent, Annelore accepte de discuter et d’être prise en photo d’entrée de jeu: «Vous savez, je crois que c’est la première fois depuis très longtemps que quelqu’un s’intéresse à moi…» Lorsqu’elle arrive dans l’Espace, elle nous laisse la suivre dans une salle d’inhalation, «tant que vous ne prenez pas en photo mon visage pendant que je consomme». Entendu. 
+				</p> 
+
+				
+
+			</div>
+
+			
+			<figure class="w-auto -mx-4 relative">
+				<img src="img/this/title-2e.jpg" alt="">
+				<figcaption class="py-2 px-4 text-xs mb-6">Photo d'ambiance "commencer la dope à 40 ans"</figcaption>
+			</figure>
+				
+			
+			<div class="container mt-8 max-w-2xl">
+
+				<div class="text-4xl font-extrabold py-6 border-y border-slate-400 mt-8 md:mt-16 mb-8 md:mb-12">
+					Commencer la dope à 40 ans 
+				</div>
+			</div>
+			
+			<div class="container mt-8 max-w-2xl relative">
+
+				<p class="text-lg font-light mb-6 lg:w-3/5">
+					Annelore a 42 ans et se considère comme une néophyte. Son sens de l’autocritique et sa lucidité quant à sa situation nous marquent particulièrement. On se dit, Julie et moi, que ça doit être encore plus dur, d’être dans un tel état de dépendance, quand on a assez de recul pour en avoir conscience. Annelore nous donnera raison. Elle fume du crack depuis un peu plus de deux ans, seulement, d’après ses dires.
+				</p>		
+				
+				<figure class="mx-auto pt-4 pb-6 lg:absolute top-1/2 lg:-translate-y-1/2 -right-40 xl:-right-60">
+					<div class="card mx-auto">
+						<div class="front">
+							<div class="card-bg absolute top-0 right-0 bottom-0 left-0" style="background-image:url('img/this/_fabio1.jpg'); background-size:cover; background-position: center center;"></div>
+							<div class="gradient absolute top-0 right-0 bottom-0 left-0 z-10"></div>
+							<div class="card-labels absolute z-10 top-7 w-full">
+								<span class="card-label1 block text-4xl leading-none text-white antialiased font-semibold mb-1">Fabio, 55 ans</span>
+								<span class="card-label2 block text-xl leading-none text-white antialiased font-sans text-light">Consomme depuis 30 ans</span>
+							</div>
+							<button class="absolute bottom-7 right-7 rounded-full text-lg  bg-yellow-200 px-6 py-3 z-10"><span class="block float-left mr-2">Sa confidence</span><img src="img/this/arrow.svg" alt="" class="mt-1.5"></button>
+						</div>
+						<div class="back bg-yellow-200">
+							<p class="absolute top-7 right-7 bottom-7 left-7 italic text-left text-sm md:text-base">
+								«Moi, j’ai commencé la drogue dure avec l’héroïne, comme beaucoup de gens à l’époque, quand j’avais plus ou moins la vingtaine. C’était un peu la mode. Je suis serveur de profession: à certains moments de ma vie, j’ai travaillé en consommant en parallèle. À d’autres, j’ai réussi à arrêter de consommer tout court. 
+								<br><br>
+								J’ai des enfants. Je suis italien d’origine, sicilien pour être précis. Vous savez, c’est marrant: lorsque je retourne en Sicile, en général, j’vais pour plusieurs semaines. Et, là-bas, j’arrive à ne pas consommer du tout, je vous promets! C’est peut-être le changement de cadre, et la famille, qui aident…» 
+							</p>
+							<button class="absolute -top-3 -right-3 rounded-full text-lg  text-yellow-200 bg-black hover:bg-gray-600 px-6 py-6"><img src="img/this/cross.svg" alt="" class="absolute top-1/2 left-1/2 -translate-x-1/2  -translate-y-1/2"></button>
+						</div>
+					</div>
+				</figure>
+
+				<p class="text-lg font-light mb-6 lg:w-3/5">
+					Avant, elle ne prenait que des médicaments prescrits par le psychiatre — et ce depuis son adolescence. Elle a toujours été à l’assurance invalidité, nous assure-t-elle. Pour la quadragénaire, il y a d’abord eu l’alcool: «Je n’ai jamais aimé le goût, mais ce n’est pas cher: tu peux te bourrer la gueule avec une dizaines de francs, selon ce que tu bois». Puis, à 40 ans, elle est «tombée», pour la première fois, dans une drogue illégale, et elle l’a fait vite et fort: le crack, direct, sans transition. Sans domicile pendant un certain temps, elle vivote désormais de canapé en canapé, et passe le plus gros de son temps dans la rue, à la recherche de sa dose. 
+				</p>
+
+			</div>
+
+			<div class="container mt-8 max-w-2xl">
+
+				<!-- COLONNE -->
+				<figure class="float-right pt-4 pb-6">
+					<div class="container">
+						<div class="w-full">
+							<img src="img/this/_ch_2_numero.jpg" alt="Au mur, de l’humour et de la prévention sur fond acidulé">
+							<figcaption class="py-2 text-xs">Nervosité / attente / préparation / numéro dans la file et type d'enfilade</figcaption>
+						</div>
+					</div>
+				</figure>
+
+				<p class="text-lg font-light mb-6">
+					Comment est-elle arrivée là? «Je ne me suis jamais sentie à ma place, dans la vie. J’ai des problèmes psy depuis que je suis toute jeune. Beaucoup de maladies psy diagnostiquées. J’ai réussi à finir le gymnase, à obtenir ma maturité, grâce à ma mère et à mon suivi médical, mais ensuite c’était comme une lente descente aux enfers. Je passais d’hôpital psy à hôpital psy. Tout au long de ma vie, je me suis contentée des médocs qu’on me prescrivait, et de l’alcool. Puis, un jour, il y a peu, quelqu’un que je considère désormais comme une mauvaise fréquentation m’a fait tomber dans le crack…»
+				</p>
+
+				<p class="text-lg font-light mb-6">
+					Et qu’est-ce que ça lui procure, comme sensation, le crack? «En fait, ça calme tout de suite mes angoisses, même si je sais bien que les paradis artificiels sont éphémères, et qu’elles vont revenir dès que je ne serai plus défoncée. Pour les gens un peu hyperactifs comme moi, ça nous pose. C’est une sorte de sentiment de plénitude.» 
+				</p>
+
+				<!-- COLONNE -->
+				<figure class="float-right pt-4 pb-6">
+					<div class="container">
+						<div class="w-full">
+							<img src="img/this/_ch_2_reste_en_vie.jpg" alt="Au mur, de l’humour et de la prévention sur fond acidulé">
+							<figcaption class="py-2 text-xs">Un message d'espoir auu milieu de cette embrouille</figcaption>
+						</div>
+					</div>
+				</figure>
+
+				<p class="text-lg font-light mb-16 md:mb-20">
+					Elle nous explique comment ça fonctionne. Consciente de l’étrangeté de la situation pour des madame-tout-le-monde comme Julie et moi, elle se veut rassurante et répète ce que l’équipe de soignants nous a déjà dit à notre arrivée: «Vous inquiétez pas, vous allez pas être défoncées de façon passive juste avec la fumée, ça marche pas comme ça.» Ouf, bon. Alors, comment ça marche, le crack, quand on le fume?
+				</p> 
+
+				<!-- <figure class="-mx-4 lg:-mx-32 xl:-mx-64">
+					<img src="img/this/vue-du-ciel.jpg" alt="">
+					<figcaption class="py-2 text-xs mb-6">Artère commerçante principale de Saint-Denis, l'avenue de la République attire chaque week-end des milliers de clients venus de la région parisienne.</figcaption>
+				</figure> -->
+
+				
+
+			</div>
+
+			
+			<figure class="w-auto -mx-4 relative">
+				<img src="img/this/title-2.jpg" alt="">
+				<!-- <img src="img/this/hotspot.svg" alt="" class="absolute hotspot hotspot1 tooltip" title="<b class='font-semibold'>La pipe à crack</b><br>Sert à se mettre dansla bouche et tirer une bonne taf pour s'envoler"> 
+				<img src="img/this/hotspot.svg" alt="" class="absolute hotspot hotspot2 tooltip" title="<b class='font-semibold'>La pipe à crack</b><br>Sert à se mettre dansla bouche et tirer une bonne taf pour s'envoler">  -->
+				<figcaption class="py-2 px-4 text-xs mb-6">Apercu du chapitre</figcaption>
+			</figure>
+				
+			
+			<div class="container mt-8 max-w-2xl">
+
+				<div class="text-4xl font-extrabold py-6 border-y border-slate-400 mt-8 md:mt-16 mb-8 md:mb-12">
+					Fumer du crack avec Annelore
+				</div>
+
+				<!-- <div class="text-6xl font-extrabold py-6 border-y border-slate-400 mt-8 md:mt-16 mb-8 md:mb-12">
+					Fumer du crack avec Annelore
+				</div> -->
+
+				<p class="text-lg font-light mb-6">
+					Avant de le fumer, il faut le cuisiner. Si, à Genève par exemple, ce produit ravageur est vendu de façon à être prêt à consommer, à Lausanne, capitale du crack en Suisse, d’après les derniers chiffres, il faut généralement le «cuisiner» soi-même, avec la cocaïne achetée. En général, ici, les usagers achètent une boulette — à dix francs pièce, ce qui suffit pour une consommation — puis la préparent eux-mêmes. Avant de recommencer l’opération, souvent jusqu’à épuisement (et ça peut prendre du temps: on ne dort, ne mange, et ne boit pas tellement, quand on est sous crack). 
+				</p>
+
+				<!-- DOUBLE -->
+				<figure class="-mx-0 lg:-mx-32 xl:-mx-64 pt-4 pb-6">
+					<div class="grid gap-4 md:grid-cols-2">
+						<div class="">
+							<img src="img/this/_ch_3_prep_1.jpg" alt="Les cahiers de sébastien, sous l'emprise de la drogue">
+							<!-- <figcaption class="py-2 text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum dignissimos nobis, reprehenderit ex sint nostrum laboriosam provident voluptate id et rem saepe quia praesentium libero sapiente? Ratione excepturi est culpa.</figcaption> -->
+						</div>
+						<div class="">
+							<img src="img/this/_ch_3_prep_2.jpg" alt="Les cahiers de sébastien, sous l'emprise de la drogue">
+							<!-- <figcaption class="py-2 text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum dignissimos nobis, reprehenderit ex sint nostrum laboriosam provident voluptate id et rem saepe quia praesentium libero sapiente? Ratione excepturi est culpa.</figcaption> -->
+						</div>
+					</div>
+					<figcaption class="py-2 text-xs">Preparation 1 et 2</figcaption>
+				</figure>
+
+				
+
+				<p class="text-lg font-light mb-6">
+					Annelore explique ses gestes, au fur et à mesure qu’elle les fait: elle s’empare d’abord des cendres d’une cigarette, fumée juste avant d’entrer dans l’espace, «sinon, ça ne brûle pas». Elle les pose sur le bouchon d’aluminium qui trône sur une bouteille en plastique, avec un fond d’eau, et une paille enfoncée sur le côté. Elle laisse ensuite la bouteille de côté, et s’attèle à cuisiner son caillou de cocaïne, qu’elle viendra poser sur les cendres. 
+				</p>
+
+			
+				<!-- COLONNE -->
+				<figure class="float-right pt-4 pb-6">
+					<div class="container">
+						<div class="w-full">
+							<img src="img/this/_ch_3_prep_3.jpg" alt="Au mur, de l’humour et de la prévention sur fond acidulé">
+							<figcaption class="py-2 text-xs">Préparation ready</figcaption>
+						</div>
+					</div>
+				</figure>
+				
+
+				<p class="text-lg font-light mb-6">
+					Un caillou, ça se prépare en mélangeant de la cocaïne, la petite boulette à dix francs achetée dans la rue, de la bicarbonate de soude et de l’eau — fournies par la structure. Annelore procède au mélange dans une cuillère, elle touille avec le bout de l’autre. Au contact de l’eau, la bicarbonate et la cocaïne moussent, avant de former, peu à peu, une petite boule difforme mais solide. Vu de l’extérieur, c’est assez impressionnant. Puis, le caillou, sur son lit de cendres, est fumé via la bouteille.
+				</p>
+
+				<!-- COLONNE -->
+				<figure class="float-right pt-4 pb-6 -mx-0 lg:-mx-32 xl:-mx-64">
+					<div class="container">
+						<div class="w-full">
+							<img src="img/this/_ch_3_action_2.jpg" alt="Au mur, de l’humour et de la prévention sur fond acidulé">
+							<figcaption class="py-2 text-xs">Dans le feu de l'action</figcaption>
+						</div>
+					</div>
+				</figure>
+
+				<p class="text-lg font-light mb-16 md:mb-20">
+					Après la première taffe, il faut l’avouer, on s’attendait à voir Annelore radialement changer de comportement. Un cliché à déconstruire: ça dépend des gens, en fait. Certains ont l’air plus défoncés que d’autres. Elle, elle continue à nous parler, la voix certes plus incertaine, en mélangeant parfois des bouts de récits, mais ses yeux pétillants — désormais à peine plus dilatés — restent alertes. À peine plus confuse qu’à son arrivée, mais aussi visiblement plus apaisée, elle ne raconte pas non plus n’importe quoi. Pendant qu’elle consomme, je glisse une question qui m’est chère: Annelore nous a confié, au début de notre entretien, qu’elle avait passé quelques mois à vivre dans la rue, depuis qu’elle a commencé le crack.  
+				</p>
+
+				<!-- <figure class="-mx-4 lg:-mx-32 xl:-mx-64">
+					<img src="img/this/enfants.jpg" alt="">
+					<figcaption class="py-2 text-xs mb-6">Le tennis de table est le sport emblématique de la ville de Saint-Denis dont l'équipe vedette est l'une des meilleures de France.</figcaption>
+				</figure> -->
+
+				
+
+			</div>
+
+			
+			
+
+			<figure class="w-auto -mx-4 relative">
+				<img src="img/this/title-3.jpg" alt="">
+				<figcaption class="py-2 px-4 text-xs mb-6">La je sais pas trop... j'ai rien trouvé de mieux pour illustré cette partie qui parle de la situation des femmes en particulier</figcaption>
+			</figure>
+				
+			
+			<div class="container mt-8 max-w-2xl">
+
+				<div class="text-4xl font-extrabold py-6 border-y border-slate-400 mt-8 md:mt-16 mb-8 md:mb-12">
+					Double peine pour<br>les femmes?
+				</div>
+			</div>
+
+				<!-- <div class="font-extrabold uppercase py-6 border-y border-slate-400 mt-8 md:mt-16 mb-8 md:mb-12">
+					Double peine pour les femmes?
+				</div> -->
+
+				
+
+			<div class="container mt-8 max-w-2xl relative">
+				<p class="text-lg font-light mb-6 lg:w-3/5">
+					C’est comment, vivre dans la rue, quand on est une femme? «C’est horrible (rire nerveux). On a tout le temps peur. Lorsque je suis arrivée à la rue, au début, je ne savais pas encore comment ça se passait, je dormais dehors sans trop faire attention. Jusqu’à ce que je me réveille subitement parce que quelqu’un était en train de me violer. C’est arrivé plusieurs fois. Du coup, j’ai commencé à chercher d’autres solutions: si j’allais chez quelqu’un, qui était d’accord de m’héberger contre du sexe, par exemple, au moins je savais que j’allais me faire violer par une seule personne, et pas dehors. Des fois, j’ai aussi passé des nuits entières à marcher dans la rue pour ne pas m’endormir, que ce soit à cause de ça, ou du froid, en hiver.» 
+				</p>
+
+				<figure class="mx-auto pt-4 pb-6 lg:absolute top-1/2 lg:-translate-y-1/2 -right-40 xl:-right-60">
+					<div class="card mx-auto">
+						<div class="front">
+							<div class="card-bg absolute top-0 right-0 bottom-0 left-0" style="background-image:url('img/this/_alison1.jpg'); background-size:cover; background-position: center center;"></div>
+							<div class="gradient absolute top-0 right-0 bottom-0 left-0 z-10"></div>
+							<div class="card-labels absolute z-10 top-7 w-full">
+								<span class="card-label1 block text-4xl leading-none text-white antialiased font-semibold mb-1">Alison, 33 ans</span>
+								<span class="card-label2 block text-xl leading-none text-white antialiased font-sans text-light">Consomme depuis 16 ans</span>
+							</div>
+							<button class="absolute bottom-7 right-7 rounded-full text-lg  bg-yellow-200 px-6 py-3 z-10"><span class="block float-left mr-2">Sa confidence</span><img src="img/this/arrow.svg" alt="" class="mt-1.5"></button>
+						</div>
+						<div class="back bg-yellow-200">
+							<p class="absolute top-7 right-7 bottom-7 left-7 italic text-left text-md">
+								«C’est ma mère qui m’a fait essayer l'héroïne pour la première fois, ici, à la place de la Riponne, quand j’avais 17 ans… Peu après, j’ai eu un gosse. L’État me l’a retiré, bien sûr. Ça m’a fait un tel choc que, pendant un moment, j’ai réussi à tout arrêter, à l’âge de 23 ans. J’étais sous <span class="font-bold underline tooltip" title="ndlr: substitut médical pour stopper la prise d’héroïne">méthadone</span>. J’ai eu deux autres enfants, avec un autre homme. Puis on s’est séparés, et c’était violent.<br><br>Il a été dire aux autorités que je suis une toxicodépendante en rémission, pour qu’on m’enlève la garde de mes deux derniers. Ça a fonctionné, et ça m’a vraiment détruite. J’ai replongé. J’ai commencé à me piquer. Mais j’ai encore l’espoir de m’en sortir, de récupérer mes enfants.»
+							</p>
+							<button class="absolute -top-3 -right-3 rounded-full text-lg  text-yellow-200 bg-black hover:bg-gray-600 px-6 py-6"><img src="img/this/cross.svg" alt="" class="absolute top-1/2 left-1/2 -translate-x-1/2  -translate-y-1/2"></button>
+						</div>
+					</div>
+				</figure>
+
+			
+
+				<p class="text-lg font-light mb-6 lg:w-3/5">
+					Les femmes, grandes oubliées du bas-seuil? À la sortie du local de consommation, direction la salle d’accueil. Il est environ 19h30, et la plupart des personnes qui attendent au guichet sont déjà venues une fois, aujourd’hui. Tout le monde est de plus en plus défoncé, ça se voit: certains tremblent frénétiquement de la jambe, d’autres font de petits tours dans la salle en balbutiant des propos indistincts. Une grande fébrilité électrise l’atmosphère. Certains haussent parfois la voix, entre eux — mais rien de plus. 
+				</p>
+
+			</div>
+			
+			<div class="container mt-8 max-w-2xl">
+				
+
+				<!-- DOUBLE -->
+				<figure class="-mx-0 lg:-mx-32 xl:-mx-64 pt-4 pb-6">
+					<div class="grid gap-4 md:grid-cols-2">
+						<div class="">
+							<img src="img/this/_ch_4_rue_qui_tue_2.jpg" alt="Les cahiers de sébastien, sous l'emprise de la drogue">
+							<!-- <figcaption class="py-2 text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum dignissimos nobis, reprehenderit ex sint nostrum laboriosam provident voluptate id et rem saepe quia praesentium libero sapiente? Ratione excepturi est culpa.</figcaption> -->
+						</div>
+						<div class="">
+							<img src="img/this/_ch_4_materiel_2.jpg" alt="Les cahiers de sébastien, sous l'emprise de la drogue">
+							<!-- <figcaption class="py-2 text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum dignissimos nobis, reprehenderit ex sint nostrum laboriosam provident voluptate id et rem saepe quia praesentium libero sapiente? Ratione excepturi est culpa.</figcaption> -->
+						</div>
+					</div>
+					<figcaption class="py-2 text-xs">Echo à le description de la rue + matos destinées aux femmes</figcaption>
+				</figure>
+
+				<p class="text-lg font-light mb-16 md:mb-20">
+					Jeanne, notre infirmière-intervenante, veut nous montrer quelque chose, dans une salle de rangement, avec des cartons pleins de matériel. Elle explique, en ouvrant une boîte de sous-vêtements et de produits d’hygiène féminins: «En parlant de la condition des femmes que nous accueillons, il est vrai que nous avons un espace de consommation spécialement prévu pour elles, par exemple. Mais nous sommes aussi censés répondre à d’autres besoins d’urgence, ici, notamment médicaux et sanitaires. Et là, j’avoue que j’ai dû me battre pour obtenir un petit budget pour acheter des protections hygiéniques et des culottes. Vous savez combien ils m’ont donné, et ce, sans savoir quand j’aurai de nouveau des fonds? 100 francs! C’est tout. Du coup, j’ai commandé les sous-vêtements sur un site de vente en ligne chinois.» 
+				</p> 
+
+				
+
+			</div>
+
+			
+			<figure class="w-auto -mx-4">
+				<img src="img/this/title-4c.jpg" alt="">
+				<figcaption class="py-2 px-4 text-xs mb-6">No comment</figcaption>
+			</figure>
+				
+			
+			<div class="container mt-8 max-w-2xl">
+
+				<div class="text-4xl font-extrabold py-6 border-y border-slate-400 mt-8 md:mt-16 mb-8 md:mb-12">
+					Des malades<br>comme les autres
+				</div>
+
+			</div>
+
+			<div class="container mt-8 max-w-2xl relative">
+
+				<!-- <figure class="-mx-4 lg:-mx-32 xl:-mx-64">
+					<img src="img/this/foule.jpg" alt="">
+					<figcaption class="py-2 text-xs mb-6">Rares sont les marchés de la banlieue parisienne à attirer autant d'acheteurs que le marché de Saint-Denis.</figcaption>
+				</figure> -->
+
+				<!-- <div class="font-extrabold uppercase py-6 border-y border-slate-400 mt-8 md:mt-16 mb-8 md:mb-12">
+					Des malades comme les autres
+				</div> -->
+
+				<p class="text-lg font-light mb-6 w-3/5">
+					Il est passé 21h30, lorsque les travailleurs doivent éconduire des usagers qui tentent encore d’entrer. Les intervenants sociosanitaires nous l’ont répété à de nombreuses reprises: les usagers sont «juste» des gens malades, il faut les voir comme tels. Et la société a de la peine avec ça. Jeanne, ça la touche beaucoup: «Vous savez, les gens les voient comme des pestiférés, des fous, des individus forcément dangereux. Alors que ce sont des malades comme les autres. On ne dit pas à quelqu’un qui a le cancer ou le sida que c’est sa faute, et qu’il est dégueulasse, mais on le fait pour les usagers… je ne comprends pas.»
+				</p>
+
+				
+
+				<figure class="mx-auto pt-4 pb-6 lg:absolute top-1/2 lg:-translate-y-1/2 -right-40 xl:-right-60">
+					<div class="card mx-auto">
+						<div class="front">
+							<div class="card-bg absolute top-0 right-0 bottom-0 left-0" style="background-image:url('img/this/_bob1.jpg'); background-size:cover; background-position: center center;"></div>
+							<div class="gradient absolute top-0 right-0 bottom-0 left-0 z-10"></div>
+							<div class="card-labels absolute z-10 top-7 w-full">
+								<span class="card-label1 block text-4xl leading-none text-white antialiased font-semibold mb-1">Bob, 57 ans</span>
+								<span class="card-label2 block text-xl leading-none text-white antialiased font-sans text-light">Consomme depuis 37 ans</span>
+							</div>
+							<button class="absolute bottom-7 right-7 rounded-full text-lg  bg-yellow-200 px-6 py-3 z-10"><span class="block float-left mr-2">Sa confidence</span><img src="img/this/arrow.svg" alt="" class="mt-1.5"></button>
+						</div>
+						<div class="back bg-yellow-200">
+							<p class="absolute top-7 right-7 bottom-7 left-7 italic text-left text-md">
+								«J’ai commencé l’héroïne il y a trois décennies. Depuis, j’ai arrêté quelques fois. Aujourd’hui, je suis suivi médicalement, je reçois ce qu’il me faut à la pharmacie. Si je viens ici, c’est seulement quand j’ai dû dépanner un pote, et que j’en ai plus assez pour moi — donc je dois racheter dans la rue. Sinon, je consomme chez moi, j’ai la chance d’avoir un appart.<br><br>Je suis un vieux, moi, j’ai plus l’âge pour la rue! Vous savez, au siècle passé, le monde de la drogue, c’était autre chose: la Platzspitz de Zurich, ou la plus grande scène ouverte de la drogue, j’y étais. Tout était dégueulasse, les gens étaient assommés par terre. On ne savait pas s'ils étaient morts ou vivants, parfois.» 
+							</p>
+							<button class="absolute -top-3 -right-3 rounded-full text-lg  text-yellow-200 bg-black hover:bg-gray-600 px-6 py-6"><img src="img/this/cross.svg" alt="" class="absolute top-1/2 left-1/2 -translate-x-1/2  -translate-y-1/2"></button>
+						</div>
+					</div>
+				</figure>
+
+				<p class="text-lg font-light mb-6 w-3/5">
+					Son collègue Jérémy a lui aussi la petite trentaine, c’est son premier jour sur ce nouveau site. Il embraie: «Et puis, ce qui est un peu triste, surtout, c’est que parfois même nos amis ne comprennent pas très bien ce qu’on fait ici, et pourquoi on a choisi ce métier.» Qu’est-ce qu’il fait ici, lui, alors, par exemple? Et les autres? Tous évoquent un effet papillon, un enchaînement de circonstances, et l’envie de se rendre utile, d’aider. 
+				</p>
+			</div>
+
+			<div class="container mt-8 max-w-2xl">
+
+				
+				<!-- GRANDE -->
+				<figure class="float-right pt-4 pb-6">
+					<img src="img/this/title-5c.jpg" alt="">
+					<figcaption class="py-2 text-xs mb-6">Jeremy, comme les autres sont là pour cette équipe</figcaption>
+				</figure>
+			
+
+
+				<p class="text-lg font-light mb-16 md:mb-20">
+					Le trentenaire, socioéducateur de formation, nous confie: «J’ai toujours été attiré par le travail auprès des populations vulnérables, en situation de précarité. J’ai travaillé avec plusieurs populations différentes, avant de m’intéresser au bas-seuil. Peut-être aussi à cause — ou grâce — à une certaine forme de militantisme. Je constate de plus en plus que les gens ont l’impression qu’on jette leur impôts par les fenêtres, en investissant dans ce genre d’endroits, pour ce genre de personnes. Alors que la toxicodépendance est une maladie, un virus comme un autre!»
+				</p>
+
+				<!-- <figure class="-mx-4 lg:-mx-32 xl:-mx-64">
+					<img src="img/this/enfants.jpg" alt="">
+					<figcaption class="py-2 text-xs mb-6">Le tennis de table est le sport emblématique de la ville de Saint-Denis dont l'équipe vedette est l'une des meilleures de France.</figcaption>
+				</figure> -->
+
+				
+
+			</div>
+
+			
+			<figure class="w-auto -mx-4">
+				<img src="img/this/title-1.jpg" alt="">
+				<figcaption class="py-2 px-4 text-xs mb-6">Fallait bien la mettre celle-ci. Détente, banalisé, human after all</figcaption>
+			</figure>
+				
+			
+			<div class="container mt-8 max-w-2xl">
+
+				<div class="text-4xl font-extrabold py-6 border-y border-slate-400 mt-8 md:mt-16 mb-8 md:mb-12">
+					Ça ne se soigne pas, mais ça se gère?
+				</div>
+
+				<!-- <div class="font-extrabold uppercase py-6 border-y border-slate-400 mt-8 md:mt-16 mb-8 md:mb-12">
+					Ça ne se soigne pas, mais ça se gère?
+				</div> -->
+
+				<p class="text-lg font-light mb-6">
+					Du coup, ça se soigne comme une grippe? Fernando, petite cinquantaine, travaille dans le milieu depuis des années. Il explique, d’une voix un peu triste: «C’est comme l’alcoolisme, ou les maladies mentales: je ne suis pas sûr que ça se soigne, mais ça se gère, en tout cas. Notre but ici, ce n’est pas de soigner les gens, ou de faire du suivi: il s’agit simplement d’assurer une consommation sans risques, et de leur offrir un cadre safe, même peut-être une oreille attentive.»   
+				</p>
+
+				<!-- COLONNE -->
+				<figure class="float-right pt-4 pb-6">
+					<div class="container">
+						<div class="w-full">
+							<img src="img/this/_ch_5_de_dos.jpg" alt="Au mur, de l’humour et de la prévention sur fond acidulé">
+							<figcaption class="py-2 text-xs">MAtos à disposition. Leur petit coin, on laisse faire</figcaption>
+						</div>
+					</div>
+				</figure>
+
+				
+
+				<p class="text-lg font-light mb-6">
+					Fernando nous parle aussi de son propre ressenti: «C’est vrai que, parfois, on se sent un peu impuissants, et à la fois, on sait qu’ils nous font confiance comme à personne, parmi les employés de l’État. Lorsqu’on ne revoit plus jamais l’un d’entre eux, c’est très dur, émotionnellement, en réalité: on s’imagine qu’il est décédé, sans jamais pouvoir en être sûrs. Peut-être, au contraire, s’en est-il sorti? Aucun moyen de le savoir.» 
+				</p>
+
+				<!-- GRANDE -->
+				<figure class="-mx-0 lg:-mx-32 xl:-mx-64 float-right pt-4 pb-6">
+					<div class="container">
+						<div class="w-full">
+							<img src="img/this/_ch_6_calin.jpg" alt="Au mur, de l’humour et de la prévention sur fond acidulé">
+							<figcaption class="py-2 text-xs">Elle est trop belle celle là. Complicité, liens humain etc etc..</figcaption>
+						</div>
+					</div>
+				</figure>
+
+				<p class="text-lg font-light mb-6">
+					Il est presque 22h. Dehors, le brouhaha de la fête de la musique est encore plus fort qu’à notre arrivée. Jérémy, Jeanne et leurs trois autres collègues sont visiblement épuisés, alors que des consommateurs traînent encore devant l’enceinte. On nous avertit: «Certains ont apprécié l’attention que vous leur avez accordée aujourd’hui. S'ils vous proposent de les suivre dans la rue, pour discuter encore un peu, vous dites non!» C’est noté. 
+				</p>
+
+				<p class="text-lg font-light mb-16 md:mb-20">
+					Devant le bâtiment, on reconnaît certains usagers, en train de danser frénétiquement face à la scène ouverte du club adjacent, le Folklore. Ils ne nous voient même pas, happés par leur transe. De loin, presque impossible de différencier un usager d’un bobo lausannois qui aurait un peu trop fait la fête. Il commence à pleuvoir, on disparaît dans la foule.
+				</p> 
+
+				<!-- COLONNE -->
+				<figure class="float-right pt-4 pb-6 mb-6 ">
+					<div class="container">
+						<div class="w-3/4 mx-auto">
+							<img src="img/this/_ch_6_nettoyage.jpg" alt="Au mur, de l’humour et de la prévention sur fond acidulé">
+							<figcaption class="py-2 text-xs">Fermer le rideau</figcaption>
+						</div>
+					</div>
+				</figure>
+
+				<p class="mb-16 md:mb-20">
+					&nbsp;
+				</p> 
+
+				{{ block('credits') }} 
+
+				<div class="spacer h-16 md:h-36"></div>
+
+			</div>
+		</div>
+		
+		
+
+		
+
+		
+		
+		
+		
+
+		
+
+		<footer class="container max-w-screen-2xl relative bg-slate-200">   
+			{{ block('footer_logo') }} 
+			<!-- <div class="bg-white px-4">
+				{{ block('other_teasers') }} 
+			</div> -->
+			<div class="bg-gray-200 px-4">
+				{{ block('footer_menu') }} 
+			</div>
+		</footer> 
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		
+		{# <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script> #}
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v1.3.3/dist/jBox.all.min.js"></script>
+		<script src="js/counter-up.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script> 
+		<!-- <script src="https://vjs.zencdn.net/8.0.4/video.min.js"></script> -->
+		
+		<!-- <script src="js/yt.js"></script> --> 
+		<script src="js/vendor/modernizr-3.11.2.min.js"></script> 
+		<!-- <script src="js/plugins.js"></script> -->
+		<script src="js/header.js"></script>
+		<!-- <script src="js/charts.js"></script> -->
+		<script src="js/main.js"></script>
+		{# <script src="js/intro.js"></script> #}
+		<!-- <script src="js/headroom.min.js"></script> -->
+		
+
+	</div>
+	</body>
+</html>

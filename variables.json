@@ -1,0 +1,27 @@
+{
+	"title": "Format Riponne",
+	"titlesocial": "Format Riponne",
+	"description": "Une nuit au local d'injection à Lausanne",
+	"authors": {
+		"photos": "Julie de Tribolet",
+		"videos": null,
+		"writer": {
+			"fname": "Daniella",
+			"lname": "Gorbunova",
+			"title": "Journaliste Blick",
+			"filetype": "png",
+			"url": "https://www.blick.ch/fr/auteurs/daniella-gorbunova-journaliste-blick-id16519907.html"
+		},
+		"dev": "César Greppin"
+	},
+	"imgSocial": "social.jpg",
+	"headertheme": "neg", 
+	"blickWhite": true,
+	"blickBlack": false,
+	"headerBoxed": true,
+	"pubDate": "2020-07-23T11:00:00+00:00",
+	"partner": {
+		"logo": "img/empty.png",
+		"link": "https://www.blick.ch/"
+	}
+}
