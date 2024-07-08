@@ -1,8 +1,60 @@
-.hotspot { transform-origin: center center; cursor: pointer; &:hover { transform: scale(1.2); } 
-    @include breakpoint(max, small) { transform: scale(0.6); }; 
+.hotspot {
+    transform-origin: center center;
+    cursor: pointer;
+    
+
+    // &:hover {
+    //     animation-play-state: paused;
+    // }
+    &.is-animated
+    {
+        animation: scaleAnimation 2s infinite; 
+        
+        @include breakpoint(max, small) {
+            animation: scaleAnimationMobile 2s infinite;
+        }
+
+        @keyframes scaleAnimation {
+            0% {
+                transform: scale(1);
+                
+            }
+            50% {
+                transform: scale(1.3);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes scaleAnimationMobile {
+            0% {
+                transform: scale(0.6);
+                
+            }
+            50% {
+                transform: scale(0.8);
+            }
+            100% {
+                transform: scale(0.6);
+            }
+        }
+    }
+
+    @include breakpoint(max, small) {
+        transform: scale(0.6);
+    }
+
+    
+
+    
 }
-.hotspot1 { left: 7%; top: 12%; @include breakpoint(max, small) { left: 5%; top: 8%; }}
-.hotspot2 { left: 14%; top: 6%; @include breakpoint(max, small) { left: 11%; top: 3%; }}
+
+
+
+
+.hotspot2 { left: 7%; top: 12%; @include breakpoint(max, small) { left: 3%; top: 3%; }}
+.hotspot1 { left: 14%; top: 6%; @include breakpoint(max, small) { left: 11%; top: 1%; }}
 .hotspot3 { left: 16%; top: 48%; @include breakpoint(max, small) { left: 14%; top: 46%; }}
 .hotspot4 { left: 19%; top: 23%; @include breakpoint(max, small) { left: 16%; top: 18%; }}
 .hotspot5 { left: 27%; top: 14%; @include breakpoint(max, small) { left: 26%; top: 14%; }}
@@ -21,7 +73,7 @@
 
 .hotspot16 { left: 74%; top: 40%; }
 
-
+.encadre {border-radius: 19px;}
 
 .jBox-wrapper
 {
@@ -30,15 +82,17 @@
     
     .jBox-container
     {
-        font-size: 16px;
+        
         font-family: Poppins;
         box-shadow: 0 0 5px rgba(0,0,0, 0);
         border: 0;
         border-radius: 5px;
 
+        @include breakpoint(max, small) { font-size: 14px; }
+
         .jBox-content
         {
-            background: #FFE293;
+            background: rgb(253 224 71);
             border: solid 1px black;
             border-radius: 5px;
             color: black;
@@ -46,7 +100,7 @@
 
         .jBox-closeButton
         {
-            background: #FFE293 !important;
+            background: rgb(253 224 71) !important;
             //border: solid 2px black;
 
             svg path { fill: rgba(0, 0, 0, 0.416); }
@@ -85,8 +139,8 @@
     display: block;
     color: inherit;
     //cursor: pointer;
-    width: 400px;
-    min-width: 400px;
+    width: 375px;
+    min-width: 375px;
     height: 525px;
     min-height: 525px;
     perspective: 1000px;
@@ -96,6 +150,9 @@
     @include breakpoint(max, small) {
         width: 100%;
         min-width: 100%;
+
+        height: 480px;
+        min-height: 480px;
     };
 
     // @include breakpoint(max, 1000px) {
@@ -106,6 +163,11 @@
     .card-bg 
     {
         
+    }
+
+    .card-frame
+    {
+        border-radius: 19px;
     }
 
    
@@ -181,7 +243,7 @@
     // .card:nth-child(even) & {
     //   transform: rotateY(180deg);
       
-  
+    
     // }
     
     // .card:nth-child(even):hover & {

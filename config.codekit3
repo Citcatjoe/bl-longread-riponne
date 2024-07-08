@@ -2260,6 +2260,19 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/img\/this\/_ch_1_accueil_3.jpg" : {
+      "ft" : 16384,
+      "iS" : 230407,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/img\/this\/_ch_1_accueil_3.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/img\/this\/_ch_1_accueil.jpg" : {
       "ft" : 16384,
       "iS" : 200074,
@@ -2429,6 +2442,19 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/img\/this\/_ch_3_prep_4.jpg" : {
+      "ft" : 16384,
+      "iS" : 186133,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/img\/this\/_ch_3_prep_4.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/img\/this\/_ch_4_materiel_2.jpg" : {
       "ft" : 16384,
       "iS" : 280827,
@@ -2565,6 +2591,19 @@
       "jF" : 0,
       "oA" : 0,
       "oAP" : "\/img\/this\/_intro_equipe.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/img\/this\/_intro_exterieur.jpg" : {
+      "ft" : 16384,
+      "iS" : 312646,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/img\/this\/_intro_exterieur.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -3358,6 +3397,16 @@
       "miP" : 0,
       "oA" : 2,
       "oAP" : "\/img\/this\/icon-grains.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/img\/this\/icon-info.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/img\/this\/icon-info.svg",
       "oF" : 0,
       "opt" : 0,
       "plM" : 52780316221407,
@@ -5060,7 +5109,7 @@
     },
     "\/social.jpg" : {
       "ft" : 16384,
-      "iS" : 1059700,
+      "iS" : 522722,
       "jF" : 0,
       "oA" : 0,
       "oAP" : "\/social.jpg",

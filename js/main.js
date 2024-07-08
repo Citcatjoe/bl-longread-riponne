@@ -17,6 +17,11 @@
 
     $('.card .back button').on('click', function() {
         $(this).parent().parent().removeClass('is-flipped');
+        $('.jBox-closeButton').trigger('click');
+    });
+
+    $('.hotspot').on('click', function() {
+        $('.hotspot').removeClass('is-animated');
     });
 
 

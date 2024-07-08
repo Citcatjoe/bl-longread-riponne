@@ -1,7 +1,7 @@
 {
-	"title": "Format Riponne",
-	"titlesocial": "Format Riponne",
-	"description": "Une nuit au local d'injection à Lausanne",
+	"title": "J’ai passé la nuit avec les défoncés au crack de Lausanne",
+	"titlesocial": "J’ai passé la nuit avec les défoncés au crack de Lausanne",
+	"description": "Le nouvel Espace de consommation sécurisé de la Riponne est censé mettre un frein à la prise de drogues dans les rues lausannoises, à la vue de tous. Blick a passé une soirée avec celles et ceux que la vie a fait échouer dans la dope, et puis ceux qui les aident. ",
 	"authors": {
 		"photos": "Julie de Tribolet",
 		"videos": null,
@@ -18,7 +18,7 @@
 	"headertheme": "neg", 
 	"blickWhite": true,
 	"blickBlack": false,
-	"headerBoxed": true,
+	"headerBoxed": false,
 	"pubDate": "2020-07-23T11:00:00+00:00",
 	"partner": {
 		"logo": "img/empty.png",
